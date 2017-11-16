@@ -1,0 +1,42 @@
+<section id="book-grid" class="container-fluid">
+
+	<form class="row justify-content-center" ng-submit="vm.bookSearch(vm.search)">
+		<input type="text" name="search" ng-change="vm.checkStr()" ng-model="vm.search" placeholder="Search by title or OLID" class="col-10 search">
+        <button class="btn search-btn" ng-click="vm.bookSearch(vm.search)"><i class="fa fa-search" aria-hidden="true"></i></button>
+	</form>
+
+    <div class="row justify-content-center">
+    	<div class="col-10 book-cat">FEATURED</div>
+    </div>
+
+    <div class="row justify-content-center">
+    	<div class="col-lg-3 col-md-10 col-sm-10 offset-md-3 book-info" ng-if="vm.books.length > 0" ng-repeat="book in vm.books">
+    		<div class="container-image">
+    			<img src="{{book.info.cover.medium}}">
+    		</div>
+    		<div class="book-details">
+    			<ul>
+    				<li>{{book.book}}</li>
+    				<li>{{book.info.title}} </li>
+    				<li>{{book.author}}</li>
+    			</ul>
+    			<ul>
+    				<li>Lorem Ipsum</li>
+    			</ul>
+    		</div>
+    		<div class="row cart">
+    			<div class="col-4 price">
+    				$29.90
+    			</div>
+    			<div class="col-8">
+    				<button type="button" class="btn btn-dark">Add To Cart</button>
+    			</div>
+    			
+    		</div>
+    	</div>
+    	<div ng-if="vm.books.length === 0">
+    		There are no books that match your search.
+    	</div>
+    </div>
+</section>
+

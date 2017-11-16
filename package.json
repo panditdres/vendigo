@@ -1,0 +1,67 @@
+{
+  "name": "candidate-exercise",
+  "description": "Let's build an online bookshop",
+  "homepage": "https://github.com/vendigo-group/candidate-exercise#readme",
+  "license": "MIT",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Vendigo Finance Group Limited",
+  "contributors": [
+    "Antony Jones <antony.jones@vendigo.com>",
+    "Sid Wood <sid.wood@vendigo.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vendigo-group/candidate-exercise.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vendigo-group/candidate-exercise/issues"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "keywords": [
+    "pairing",
+    "test"
+  ],
+  "scripts": {
+    "lint": "snazzy",
+    "dev": "gulp dev & nodemon .",
+    "build": "gulp && node index.js",
+    "start": "nodemon .",
+    "test": "mocha ./test/**/*.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "boom": "^4.2.0",
+    "cheerio": "^1.0.0-rc.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "hapi": "^16.0.1",
+    "inert": "^4.0.3",
+    "joi": "^10.0.5",
+    "lodash": "^4.17.4",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "s": "^0.1.1",
+    "vision": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "mocha": "^3.5.3",
+    "nodemon": "^1.11.0",
+    "pump": "^1.0.2",
+    "snazzy": "^6.0.0",
+    "standard": "^8.6.0"
+  }
+}
