@@ -72,6 +72,20 @@ function Books_Routes(router) {
 			}
 		})
 	})
+	
+	router.post('/getBookByAuthor', (req,res) => {
+		// console.log(req.body,'title str')	
+
+		let details = req.body;
+
+		BookHelper.getBookByAuthor( details, resp => {
+			if(resp.error === true){
+				res.status(400).send(resp.err)
+			} else {
+				res.status(200).send(resp.data)
+			}
+		})
+	})
 
 }
 
